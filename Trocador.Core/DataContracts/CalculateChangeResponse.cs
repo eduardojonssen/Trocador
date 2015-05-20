@@ -5,11 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Trocador.Core.DataContracts {
+
     public class CalculateChangeResponse {
 
-        public List<string> Errors { get; set; }
+        public CalculateChangeResponse() {
 
-        public Dictionary<int,int> Coins { get; set; }
+            this.ErrorReportList = new List<ErrorReport>();
+        }
+
+        public List<ErrorReport> ErrorReportList { get; set; }
+
+        public Dictionary<int, int> Coins { get; set; }
 
     }
 }

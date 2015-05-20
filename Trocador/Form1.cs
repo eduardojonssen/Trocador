@@ -25,14 +25,16 @@ namespace Trocador {
             CalculateChangeRequest request = new CalculateChangeRequest();
 
             request.PaidAmount = Convert.ToInt32(this.UxTxtAmountPaid.Text);
-
-            request.ProductAmount = Convert.ToInt32(this.UxTxtProductAmount.Text);
+            request.ProductAmount = Convert.ToInt32(this.UxTxtProductAmount.Text);            
 
             CalculateChangeResponse response = trocadorManager.CalculateChange(request);
 
-            if (response.Errors.Any()) {
-                foreach (string error in response.Errors) {
-                    this.UxTxtChange.Text += error + "\r\n";
+            if (response.ErrorReportList.Any()) {
+
+                foreach (ErrorReport errorReport in response.ErrorReportList) {
+                    
+                    this.UxTxtChange.Text += string.Format("Campo: {0}, Mensagem: {1}\r\n",
+                        errorReport.FieldName, errorReport.Message);
                 }
             }
             else {

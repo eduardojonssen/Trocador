@@ -8,15 +8,22 @@ using Trocador.Core.DataContracts;
 namespace Trocador.Core {
     public class TrocadorManager {
         public CalculateChangeResponse CalculateChange(CalculateChangeRequest request) {
+
             CalculateChangeResponse response = new CalculateChangeResponse();
-            response.Errors = new List<string>();
+
             try {
-                
-                response.Errors = Validate(request.ProductAmount, request.PaidAmount);
+                // TODO: Salvar log do request.
+
+                // Verifica se algum erro foi encontrado nos dados recebidos.
+                // Caso positivo, sai do método.
+                if (request.IsValid == false) {
+                    response.ErrorReportList.AddRange(request.GetErrors());
+                    return response;
+                }                
 
                 response.Coins = new Dictionary<int, int>();
 
-                if (response.Errors.Count() > 0) {
+                if (response.ErrorReportList.Count() > 0) {
                     return response;
                 }
 
@@ -34,24 +41,17 @@ namespace Trocador.Core {
 
             }
             catch (Exception ex) {
-                response.Errors.Add("Erro inesperado, tente novamente mais tarde");
+
+                // TODO: Salvar log da exceção.
+
+                ErrorReport errorReport = new ErrorReport();
+                errorReport.Message = "Erro inesperado, tente novamente mais tarde";
+                response.ErrorReportList.Add(errorReport);
             }
+
+            // TODO: Salvar log do response.
 
             return response;
-        }
-
-        private static List<string> Validate(int productAmount, int paidAmount) {
-            List<string> returnValue = new List<string>();
-            if (paidAmount < 0) {
-                returnValue.Add("Valor pago não pode ser menor que zero.\r\n");
-            }
-            if (productAmount < 0) {
-                returnValue.Add("Valor do produto não pode ser menor que zero.\r\n");
-            }
-            if (returnValue.Any() == false && (paidAmount < productAmount)) {
-                returnValue.Add("Valor insuficiente para o produto escolhido. Acrescente mais dinheiro.\r\n");
-            }
-            return returnValue;
         }
     }
 }
