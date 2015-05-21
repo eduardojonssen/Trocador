@@ -43,6 +43,7 @@
     <Compile Include="DataContracts\CalculateChangeRequest.cs" />
     <Compile Include="DataContracts\CalculateChangeResponse.cs" />
     <Compile Include="DataContracts\ErrorReport.cs" />
+    <Compile Include="MoneyUnit.cs" />
     <Compile Include="TrocadorManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

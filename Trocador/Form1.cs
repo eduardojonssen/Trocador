@@ -38,8 +38,9 @@ namespace Trocador {
                 }
             }
             else {
-                foreach (KeyValuePair<int, int> coin in response.Coins) {
-                    this.UxTxtChange.Text += string.Format("{0} coins of {1} cents \r\n", coin.Value, coin.Key);
+                foreach (KeyValuePair<int, MoneyUnit> coin in response.Change) {
+                    this.UxTxtChange.Text += string.Format("{0} {1} of {2} \r\n", coin.Key,  coin.Value.Name, coin.Value.AmountInCents);
+
                 }
             }
         }

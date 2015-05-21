@@ -12,6 +12,9 @@ namespace Trocador.Core.DataContracts {
             this.ErrorReportList = new List<ErrorReport>();
         }
 
+        /// <summary>
+        /// Obtem a flag que informa se os dados contidos na solicitação são válidos e consistentes.
+        /// </summary>
         internal bool IsValid {
             get {
                 this.ErrorReportList.Clear();
@@ -20,11 +23,15 @@ namespace Trocador.Core.DataContracts {
             }
         }
 
+        /// <summary>
+        /// Obtém ou define a lista de erros encontrados na validação.
+        /// </summary>
         private List<ErrorReport> ErrorReportList { get; set; }
 
         /// <summary>
         /// Adiciona um erro à lista de erros de validação.
         /// </summary>
+        /// <param name="fieldName">Nome do campo que gerou o erro.</param>
         /// <param name="errorMessage">Mensagem de erro a ser adicionada.</param>
         protected void AddError(string fieldName, string errorMessage) {
 

@@ -15,7 +15,7 @@ namespace Trocador.Core.DataContracts {
 
         public List<ErrorReport> ErrorReportList { get; set; }
 
-        public Dictionary<int, int> Coins { get; set; }
+        public List<KeyValuePair<int, MoneyUnit>> Change { get; set; }
 
     }
 }
