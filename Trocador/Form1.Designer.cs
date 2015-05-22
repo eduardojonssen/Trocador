@@ -117,7 +117,7 @@
             this.Controls.Add(this.UxTxtAmountPaid);
             this.Controls.Add(this.UxTxtProductAmount);
             this.Name = "Form1";
-            this.Text = "Trocador 0.3a beta";
+            this.Text = "Trocador";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
