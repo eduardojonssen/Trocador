@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Trocador.Core.Processors.BillProcessor">
-    <Position X="4" Y="3.25" Width="1.5" />
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAAYAAAAAAAAAA=</HashCode>
       <FileName>Processors\BillProcessor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Trocador.Core.Processors.CoinProcessor">
-    <Position X="1.5" Y="3.25" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAAYAAAAAAAAAA=</HashCode>
       <FileName>Processors\CoinProcessor.cs</FileName>
@@ -19,6 +19,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAYAAAAAAAAAA=</HashCode>
       <FileName>Processors\AbstractProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trocador.Core.Processors.SilverProcessor">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAAYAAAAAAAAAA=</HashCode>
+      <FileName>Processors\SilverProcessor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

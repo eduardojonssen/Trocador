@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Trocador.Core.Processors {
+    public class SilverProcessor : AbstractProcessor {
 
-    public class BillProcessor : AbstractProcessor {
-
-        public BillProcessor() { }
-
-        private int[] availableValues = { 10000, 5000, 2000, 1000, 500, 200 };
+        public SilverProcessor() { }
 
         internal override string CurrencyType {
-            get { return "BILL"; }
+            get { return "SILVER"; }
         }
+
+        private int[] availableValues = { 100000, 50000 };
+
         internal override int[] MoneyValues {
             get { return this.availableValues; }
         }

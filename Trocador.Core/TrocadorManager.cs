@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Trocador.Core.DataContracts;
+using Trocador.Core.Processors;
 
 namespace Trocador.Core {
 
@@ -20,12 +21,41 @@ namespace Trocador.Core {
                     response.ErrorReportList.AddRange(request.GetErrors());
                     return response;
                 }
-                
-                response.TotalChangeAmount = request.PaidAmount - request.ProductAmount;
 
+                Nullable<int> totalChange = request.PaidAmount - request.ProductAmount;
 
-                // TODO: Implementar lógica de escolha dos processadores e
-                // montar o resultado para o cliente.
+                int currentChange = (int)totalChange;
+
+                List<KeyValuePair<int, MoneyUnit>> currentChangeValues = new List<KeyValuePair<int, MoneyUnit>>();
+
+                while (currentChange != 0) {
+                    AbstractProcessor processor = ProcessorFactory.Create(currentChange);
+
+                    if (processor == null) {
+                        response.ErrorReportList.Add(new ErrorReport() { 
+                            FieldName = null, 
+                            Message = @"Não foi possivel processar seu troco. \r\n 
+                                        Tente novamente mais tarde" 
+                        });
+                        break;
+                    }
+
+                    Dictionary<int, int> processorChange = processor.CalculateChange(currentChange);
+
+                    foreach(KeyValuePair<int,int> change in processorChange){
+                        currentChangeValues.Add( new KeyValuePair<int, MoneyUnit> (change.Value, new MoneyUnit() { 
+                            Name = processor.CurrencyType, 
+                            AmountInCents = change.Key 
+                        }));
+                        currentChange -= change.Key * change.Value;
+                    }
+                }
+
+                if (response.ErrorReportList.Any() == false) {
+                    response.Change = currentChangeValues;
+                    response.TotalChangeAmount = totalChange;
+                    response.Success = true;
+                }
             }
             catch (Exception ex) {
 

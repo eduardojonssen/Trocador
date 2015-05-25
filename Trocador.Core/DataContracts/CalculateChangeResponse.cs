@@ -19,7 +19,9 @@ namespace Trocador.Core.DataContracts {
 
         public List<KeyValuePair<int, MoneyUnit>> Change { get; set; }
 
-        public int TotalChangeAmount { get; set; }
+        public bool Success { get; set; }
+
+        public Nullable<int> TotalChangeAmount { get; set; }
 
     }
 }

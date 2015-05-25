@@ -47,6 +47,8 @@
     <Compile Include="Processors\BillProcessor.cs" />
     <Compile Include="Processors\AbstractProcessor.cs" />
     <Compile Include="Processors\CoinProcessor.cs" />
+    <Compile Include="Processors\ProcessorFactory.cs" />
+    <Compile Include="Processors\SilverProcessor.cs" />
     <Compile Include="TrocadorManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

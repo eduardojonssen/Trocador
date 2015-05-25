@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,12 +13,18 @@ using Trocador.Core.DataContracts;
 
 
 namespace Trocador {
+
     public partial class Form1 : Form {
+
         public Form1() {
             InitializeComponent();
+
+            // Exibe a versão e o build da aplicação na barra de título.
+            this.Text = Application.ProductName + " - versão " + Assembly.GetExecutingAssembly().GetName().Version;
         }
 
         private void UxBtnCalculate_Click(object sender, EventArgs e) {
+
             this.UxTxtChange.Text = string.Empty;
 
             TrocadorManager trocadorManager = new TrocadorManager();

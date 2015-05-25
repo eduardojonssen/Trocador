@@ -14,7 +14,7 @@ namespace Trocador.Core.Processors {
         /// <summary>
         /// Obtém a lista de valores disponíveis.
         /// </summary>
-        protected abstract int[] MoneyValues { get; }
+        internal abstract int[] MoneyValues { get; }
 
         /// <summary>
         /// Contabiliza as unidades monetárias necessárias para atingir o valor do troco especificado.

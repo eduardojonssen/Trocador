@@ -16,7 +16,7 @@ namespace Trocador.Core.Processors {
             get { return "COIN"; }
         }
 
-        protected override int[] MoneyValues {
+        internal override int[] MoneyValues {
             get { return this.availableValues; }
         }
 
@@ -28,7 +28,7 @@ namespace Trocador.Core.Processors {
 
                 //Verifica se a nota em questão será utilizada no troco.
                 if (currentMoneyAmount % this.MoneyValues[i] != currentMoneyAmount) {
-                    changeDictionary.Add(currentMoneyAmount / this.MoneyValues[i], this.MoneyValues[i]);
+                    changeDictionary.Add(this.MoneyValues[i], currentMoneyAmount / this.MoneyValues[i]);
                 }
 
                 currentMoneyAmount = currentMoneyAmount % this.MoneyValues[i];
