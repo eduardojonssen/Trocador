@@ -21,6 +21,6 @@ namespace Trocador.Core.Processors {
         /// </summary>
         /// <param name="currentMoneyAmount">Valor do troco a ser calculado.</param>
         /// <returns>Retorna um dicionário onde a chave é a unidade monetária e valor é a quantidade desta unidade.</returns>
-        public abstract Dictionary<int, int> CalculateChange(int currentMoneyAmount);
+        internal abstract Dictionary<int, int> CalculateChange(int currentMoneyAmount);
     }
 }

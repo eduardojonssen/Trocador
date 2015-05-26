@@ -34,8 +34,7 @@ namespace Trocador.Core {
                     if (processor == null) {
                         response.ErrorReportList.Add(new ErrorReport() { 
                             FieldName = null, 
-                            Message = @"Não foi possivel processar seu troco. \r\n 
-                                        Tente novamente mais tarde" 
+                            Message = "Não foi possivel processar seu troco. Tente novamente mais tarde" 
                         });
                         break;
                     }

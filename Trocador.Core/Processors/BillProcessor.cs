@@ -19,7 +19,7 @@ namespace Trocador.Core.Processors {
             get { return this.availableValues; }
         }
 
-        public override Dictionary<int, int> CalculateChange(int currentMoneyAmount) {
+        internal override Dictionary<int, int> CalculateChange(int currentMoneyAmount) {
 
             Dictionary<int, int> changeDictionary = new Dictionary<int, int>();
 

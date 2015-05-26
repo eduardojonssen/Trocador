@@ -10,7 +10,7 @@ namespace Trocador.Core.Processors {
 
         public CoinProcessor() { }
 
-        private int[] availableValues = { 100, 50, 25, 10, 5, 1 };
+        private int[] availableValues = { 100, 50, 25, 10, 5 };
 
         internal override string CurrencyType {
             get { return "COIN"; }
@@ -20,7 +20,7 @@ namespace Trocador.Core.Processors {
             get { return this.availableValues; }
         }
 
-        public override Dictionary<int, int> CalculateChange(int currentMoneyAmount) {
+        internal override Dictionary<int, int> CalculateChange(int currentMoneyAmount) {
 
             Dictionary<int, int> changeDictionary = new Dictionary<int, int>();
 
