@@ -35,6 +35,9 @@
             // 
             // UxTxtProductAmount
             // 
+            this.UxTxtProductAmount.AccessibleDescription = "";
+            this.UxTxtProductAmount.AccessibleName = "Valor do produto";
+            this.UxTxtProductAmount.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.UxTxtProductAmount.Location = new System.Drawing.Point(164, 21);
             this.UxTxtProductAmount.Name = "UxTxtProductAmount";
             this.UxTxtProductAmount.Size = new System.Drawing.Size(100, 26);
@@ -44,6 +47,8 @@
             // 
             // UxTxtAmountPaid
             // 
+            this.UxTxtAmountPaid.AccessibleName = "Valor pago";
+            this.UxTxtAmountPaid.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.UxTxtAmountPaid.Location = new System.Drawing.Point(164, 73);
             this.UxTxtAmountPaid.Name = "UxTxtAmountPaid";
             this.UxTxtAmountPaid.Size = new System.Drawing.Size(100, 26);

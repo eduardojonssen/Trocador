@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dlp.Framework">
+      <HintPath>..\packages\Dlp.Framework.dll.0.6.4\lib\net45\Dlp.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +47,11 @@
     <Compile Include="DataContracts\CalculateChangeRequest.cs" />
     <Compile Include="DataContracts\CalculateChangeResponse.cs" />
     <Compile Include="DataContracts\ErrorReport.cs" />
+    <Compile Include="LogSystem\AbstractLog.cs" />
+    <Compile Include="LogSystem\EventViewerLog.cs" />
+    <Compile Include="LogSystem\FileLog.cs" />
+    <Compile Include="LogSystem\LogFactory.cs" />
+    <Compile Include="LogSystem\LogManager.cs" />
     <Compile Include="MoneyUnit.cs" />
     <Compile Include="Processors\BillProcessor.cs" />
     <Compile Include="Processors\AbstractProcessor.cs" />
@@ -53,6 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="ProcessorsDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
