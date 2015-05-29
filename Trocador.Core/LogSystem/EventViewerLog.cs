@@ -5,9 +5,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Trocador.Core.Utility;
 
 namespace Trocador.Core.LogSystem {
-	class EventViewerLog : AbstractLog {
+
+	public class EventViewerLog : AbstractLog {
+
+		public EventViewerLog(IConfigurationUtility configurationUtility) : base(configurationUtility) { }
+
 		public override void Save(string logCategory, string methodName, object objectToLog) {
 			string sSource;
 			string sLog;
@@ -18,7 +23,7 @@ namespace Trocador.Core.LogSystem {
 			sLog = "Application";
 			sEvent = string.Format("{0}|{1}|{2}|{3}", DateTime.UtcNow, logCategory, methodName, serializedData);
 
-			if (EventLog.SourceExists(sSource) == false) { 
+			if (EventLog.SourceExists(sSource) == false) {
 				EventLog.CreateEventSource(sSource, sLog);
 			}
 
