@@ -4,6 +4,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Trocador.Core;
 using Trocador.Core.DataContracts;
 using System.Diagnostics.CodeAnalysis;
+using Trocador.Test.Trocador.Core.Test.Mocks;
+using System.IO;
+using Trocador.Core.Utility;
 
 namespace Trocador.Test.Trocador.Core.Test {
 
@@ -11,10 +14,24 @@ namespace Trocador.Test.Trocador.Core.Test {
     [TestClass]
     public class TrocadorManagerTest {
 
+		[ClassInitialize]
+		public static void InitializeTests(TestContext context) {
+
+			ConfigurationUtilityMock mock = new ConfigurationUtilityMock();
+			mock.LogFileName = "log.log";
+			mock.LogPath = "C:\\Logs\\Test\\";
+			mock.LogFullPath = Path.Combine(mock.LogPath, mock.LogFileName);
+			mock.LogType = "File";
+
+			ConfigurationUtilityMock = mock;
+		}
+
+		public static IConfigurationUtility ConfigurationUtilityMock { get; set; }
+
         [TestMethod]
         public void CalculateChange_NegativeProductAmount_Test() {
 
-            TrocadorManager trocadorManager = new TrocadorManager();
+			TrocadorManager trocadorManager = new TrocadorManager(ConfigurationUtilityMock);
 
             CalculateChangeRequest request = new CalculateChangeRequest();
 
@@ -31,11 +48,10 @@ namespace Trocador.Test.Trocador.Core.Test {
             Assert.IsNotNull(response.ErrorReportList.SingleOrDefault(p => p.FieldName.EndsWith("ProductAmount")));
         }
 
-
         [TestMethod]
         public void CalculateChange_ExactChange375_Test() {
 
-            TrocadorManager trocadorManager = new TrocadorManager();
+			TrocadorManager trocadorManager = new TrocadorManager(ConfigurationUtilityMock);
 
             CalculateChangeRequest request = new CalculateChangeRequest();
 

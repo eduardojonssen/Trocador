@@ -4,20 +4,35 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Trocador.Core.Utility;
 
 namespace Trocador.Core.LogSystem {
 
-	public static class LogManager {
+	public class LogManager {
 
-		public static void SubmitLog(string logCategory, string methodName, object objectToLog) {
+		public LogManager(IConfigurationUtility configurationUtility = null) {
 
-			IConfigurationUtility configurationUtility = new ConfigurationUtility();
+			this.ConfigurationUtility = configurationUtility;
+		}
 
-			AbstractLog logger = LogFactory.Create(configurationUtility);
-			logger.Save(logCategory, methodName, objectToLog);
+		private IConfigurationUtility configurationUtility;
+		public IConfigurationUtility ConfigurationUtility {
+			get {
+				if (this.configurationUtility == null) { this.configurationUtility = new ConfigurationUtility(); }
+				return this.configurationUtility;
+			}
+			set {
+				this.configurationUtility = value;
+			}
+		}
+
+		public void Save(string logCategory, object objectToLog, [CallerMemberName] string methodName = "") {
+
+			AbstractLog logger = LogFactory.Create(this.ConfigurationUtility);
+			logger.Save(logCategory, objectToLog, methodName);
 		}
 	}
 }

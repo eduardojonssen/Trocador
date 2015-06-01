@@ -3,17 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Trocador.Core.Utility;
 
 namespace Trocador.Core.LogSystem {
 
+	[Serializable]
 	public class EventViewerLog : AbstractLog {
 
 		public EventViewerLog(IConfigurationUtility configurationUtility) : base(configurationUtility) { }
 
-		public override void Save(string logCategory, string methodName, object objectToLog) {
+		public override void Save(string logCategory, object objectToLog, [CallerMemberName] string methodName = "") {
 			string sSource;
 			string sLog;
 			string sEvent;

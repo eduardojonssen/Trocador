@@ -5,18 +5,26 @@ using System.Linq;
 using Trocador.Core.DataContracts;
 using Trocador.Core.LogSystem;
 using Trocador.Core.Processors;
+using Trocador.Core.Utility;
 
 namespace Trocador.Core {
 
 	public class TrocadorManager {
+
+		public TrocadorManager(IConfigurationUtility configurationUtility = null) {
+
+			this.Log = new LogManager(configurationUtility);
+		}
+
+		private LogManager Log { get; set; }
 
 		public CalculateChangeResponse CalculateChange(CalculateChangeRequest request) {
 
 			CalculateChangeResponse response = new CalculateChangeResponse();
 
 			try {
+				this.Log.Save("Request", request);
 
-				LogManager.SubmitLog("Request", "CalculateChange", request);
 				// Verifica se algum erro foi encontrado nos dados recebidos.
 				// Caso positivo, sai do método.
 				if (request.IsValid == false) {
@@ -60,14 +68,14 @@ namespace Trocador.Core {
 			}
 			catch (Exception ex) {
 				//Se algum erro for disparado, retorna uma mensagem generica de erro.
-				LogManager.SubmitLog("Exception", "CalculateChange", ex.ToString());
+				this.Log.Save("Exception", ex.ToString());
 				ErrorReport errorReport = new ErrorReport();
 				errorReport.Message = "Erro inesperado, tente novamente mais tarde";
 				response.ErrorReportList.Add(errorReport);
 			}
 
 			finally {
-				LogManager.SubmitLog("Response", "CalculateChange", response);
+				this.Log.Save("Response", response);
 			}
 
 			return response;

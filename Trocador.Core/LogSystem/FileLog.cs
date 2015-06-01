@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Trocador.Core.Utility;
@@ -13,7 +14,7 @@ namespace Trocador.Core.LogSystem {
 
 		public FileLog(IConfigurationUtility configurationUtility) : base(configurationUtility) { }
 
-		public override void Save(string logCategory, string methodName, object objectToLog) {
+		public override void Save(string logCategory, object objectToLog, [CallerMemberName] string methodName = "") {
 
 			string serializedData = Serializer.JsonSerialize(objectToLog);
 
@@ -23,13 +24,11 @@ namespace Trocador.Core.LogSystem {
 
 			logRegister += registerSeparator;
 
-			ConfigurationUtility configurationUtility = new ConfigurationUtility();
-
-			if (Directory.Exists(configurationUtility.LogPath) == false) {
-				Directory.CreateDirectory(configurationUtility.LogPath);
+			if (Directory.Exists(this.ConfigurationUtility.LogPath) == false) {
+				Directory.CreateDirectory(this.ConfigurationUtility.LogPath);
 			}
 
-			File.AppendAllText(configurationUtility.LogFullPath, logRegister);
+			File.AppendAllText(this.ConfigurationUtility.LogFullPath, logRegister);
 
 			/* Escrita de arquivo com FileStream.
 			FileStream fileStream = new FileStream(LogFullPath, FileMode.Append);
