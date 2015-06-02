@@ -13,7 +13,7 @@ namespace Trocador.Core.LogSystem {
 	[Serializable]
 	public class EventViewerLog : AbstractLog {
 
-		public EventViewerLog(IConfigurationUtility configurationUtility) : base(configurationUtility) { }
+		public EventViewerLog() : base() { }
 
 		public override void Save(string logCategory, object objectToLog, [CallerMemberName] string methodName = "") {
 			string sSource;

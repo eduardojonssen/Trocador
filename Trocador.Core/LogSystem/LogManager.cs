@@ -13,25 +13,11 @@ namespace Trocador.Core.LogSystem {
 
 	public class LogManager {
 
-		public LogManager(IConfigurationUtility configurationUtility = null) {
-
-			this.ConfigurationUtility = configurationUtility;
-		}
-
-		private IConfigurationUtility configurationUtility;
-		public IConfigurationUtility ConfigurationUtility {
-			get {
-				if (this.configurationUtility == null) { this.configurationUtility = new ConfigurationUtility(); }
-				return this.configurationUtility;
-			}
-			set {
-				this.configurationUtility = value;
-			}
-		}
+		public LogManager() { }
 
 		public void Save(string logCategory, object objectToLog, [CallerMemberName] string methodName = "") {
 
-			AbstractLog logger = LogFactory.Create(this.ConfigurationUtility);
+			AbstractLog logger = LogFactory.Create();
 			logger.Save(logCategory, objectToLog, methodName);
 		}
 	}

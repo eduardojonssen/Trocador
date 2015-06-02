@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dlp.Framework.Container;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -10,9 +11,9 @@ namespace Trocador.Core.LogSystem {
 
 	public abstract class AbstractLog {
 
-		public AbstractLog(IConfigurationUtility configurationUtility) {
+		public AbstractLog() {
 
-			this.ConfigurationUtility = configurationUtility;
+			this.ConfigurationUtility = IocFactory.Resolve<IConfigurationUtility>();
 		}
 
 		protected IConfigurationUtility ConfigurationUtility { get; set; }

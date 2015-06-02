@@ -48,6 +48,8 @@
     <Compile Include="DataContracts\CalculateChangeRequest.cs" />
     <Compile Include="DataContracts\CalculateChangeResponse.cs" />
     <Compile Include="DataContracts\ErrorReport.cs" />
+    <Compile Include="Interceptors\ConfigurationUtilityInterceptor.cs" />
+    <Compile Include="Interceptors\InterceptAttribute.cs" />
     <Compile Include="LogSystem\AbstractLog.cs" />
     <Compile Include="LogSystem\EventViewerLog.cs" />
     <Compile Include="LogSystem\FileLog.cs" />

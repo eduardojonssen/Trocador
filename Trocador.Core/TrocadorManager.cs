@@ -1,8 +1,10 @@
 ﻿using Dlp.Framework;
+using Dlp.Framework.Container;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Trocador.Core.DataContracts;
+using Trocador.Core.Interceptors;
 using Trocador.Core.LogSystem;
 using Trocador.Core.Processors;
 using Trocador.Core.Utility;
@@ -11,9 +13,18 @@ namespace Trocador.Core {
 
 	public class TrocadorManager {
 
-		public TrocadorManager(IConfigurationUtility configurationUtility = null) {
+		public TrocadorManager() {
 
-			this.Log = new LogManager(configurationUtility);
+			IocFactory.Register(
+
+				// Registra a interface.
+				Component.For<IConfigurationUtility>().Interceptor<ConfigurationUtilityInterceptor>()
+
+				// Informa a classe concreta que implementa a interface IConfigurationUtility.
+				.ImplementedBy<ConfigurationUtility>().IsSingleton()
+			);
+
+			this.Log = new LogManager();
 		}
 
 		private LogManager Log { get; set; }

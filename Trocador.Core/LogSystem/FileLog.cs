@@ -12,7 +12,7 @@ using Trocador.Core.Utility;
 namespace Trocador.Core.LogSystem {
 	class FileLog : AbstractLog{
 
-		public FileLog(IConfigurationUtility configurationUtility) : base(configurationUtility) { }
+		public FileLog() : base() { }
 
 		public override void Save(string logCategory, object objectToLog, [CallerMemberName] string methodName = "") {
 

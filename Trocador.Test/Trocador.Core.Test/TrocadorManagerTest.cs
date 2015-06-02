@@ -7,6 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 using Trocador.Test.Trocador.Core.Test.Mocks;
 using System.IO;
 using Trocador.Core.Utility;
+using Dlp.Framework.Container;
 
 namespace Trocador.Test.Trocador.Core.Test {
 
@@ -16,14 +17,15 @@ namespace Trocador.Test.Trocador.Core.Test {
 
 		[ClassInitialize]
 		public static void InitializeTests(TestContext context) {
-
 			ConfigurationUtilityMock mock = new ConfigurationUtilityMock();
-			mock.LogFileName = "log.log";
+			mock.LogFileName = "logMock.log";
 			mock.LogPath = "C:\\Logs\\Test\\";
 			mock.LogFullPath = Path.Combine(mock.LogPath, mock.LogFileName);
 			mock.LogType = "File";
 
-			ConfigurationUtilityMock = mock;
+			IocFactory.Register(
+				Component.For<IConfigurationUtility>().Instance(mock)
+			);
 		}
 
 		public static IConfigurationUtility ConfigurationUtilityMock { get; set; }
@@ -31,7 +33,7 @@ namespace Trocador.Test.Trocador.Core.Test {
         [TestMethod]
         public void CalculateChange_NegativeProductAmount_Test() {
 
-			TrocadorManager trocadorManager = new TrocadorManager(ConfigurationUtilityMock);
+			TrocadorManager trocadorManager = new TrocadorManager();
 
             CalculateChangeRequest request = new CalculateChangeRequest();
 
@@ -51,9 +53,17 @@ namespace Trocador.Test.Trocador.Core.Test {
         [TestMethod]
         public void CalculateChange_ExactChange375_Test() {
 
-			TrocadorManager trocadorManager = new TrocadorManager(ConfigurationUtilityMock);
+			// TODO: Registrar mock.
+
+			TrocadorManager trocadorManager = new TrocadorManager();
 
             CalculateChangeRequest request = new CalculateChangeRequest();
+
+			IConfigurationUtility iMock = IocFactory.Resolve<IConfigurationUtility>();
+
+			ConfigurationUtilityMock mock = (ConfigurationUtilityMock)iMock; 
+
+			mock.LogType = "EventViewer";
 
             request.PaidAmount = 500;
             request.ProductAmount = 125;
