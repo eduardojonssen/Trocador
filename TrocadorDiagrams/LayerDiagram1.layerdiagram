@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4e53c726-5c02-42a2-b398-0813e7f05709" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="c78355b4-4ea7-4eb4-8f0f-08a9da405656" name="UI">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="a4710108-697a-4eb4-95e4-fe0f93cfa6f1" direction="Forward">
+          <layerMoniker Id="ebdc0abf-16e2-4a3d-9e53-45be41eb7513" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="422ded2a-850e-41fb-829f-f68450dc0e40" direction="Forward">
+          <layerMoniker Id="8a668448-7c2e-4e77-98e3-e8b36ccc1aaf" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="4e03fb81-9726-4391-8eff-82d36006d91f" name="Trocador">
+          <ArtifactNode Label="Trocador" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/Trocador/Trocador/Trocador.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Trocador)" Label="Trocador.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="ebdc0abf-16e2-4a3d-9e53-45be41eb7513" name="Core">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="a7ceb35f-9981-4fc1-849e-8d219b83801a" direction="Forward">
+          <layerMoniker Id="728524ea-c7e5-4eea-a194-0ec3cbcad16e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="797ce4f7-71d2-4c4a-a31f-017704e47064" name="TrocadorManager.cs">
+          <ArtifactNode Label="TrocadorManager.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/Trocador/Trocador.Core/Trocador.Core.csproj&quot; File=&quot;$(PersonalUri)/visual studio 2013/Projects/Trocador/Trocador.Core/TrocadorManager.cs&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Trocador.Core Namespace=Trocador.Core Type=TrocadorManager)" Label="TrocadorManager" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="b1ef4993-2cbd-46df-89ab-72965ed84024" name="Utility" />
+    <layer Id="728524ea-c7e5-4eea-a194-0ec3cbcad16e" name="Log">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="bcc02be6-7b1f-46a5-887b-7c38caa80f22" direction="Forward">
+          <layerMoniker Id="b1ef4993-2cbd-46df-89ab-72965ed84024" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="10d593a9-3982-4ec2-99d3-1a0f2ecc4b3f" name="LogSystem">
+          <ArtifactNode Label="LogSystem" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/Trocador/Trocador.Core/Trocador.Core.csproj&quot; File=&quot;$(PersonalUri)/visual studio 2013/Projects/Trocador/Trocador.Core/LogSystem/&quot;)">
+            <Category Ref="ProjectFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Trocador.Core Namespace=Trocador.Core.LogSystem Type=AbstractLog)" Label="AbstractLog" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Trocador.Core Namespace=Trocador.Core.LogSystem Type=EventViewerLog)" Label="EventViewerLog" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Trocador.Core Namespace=Trocador.Core.LogSystem Type=FileLog)" Label="FileLog" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Trocador.Core Namespace=Trocador.Core.LogSystem Type=LogFactory)" Label="LogFactory" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Trocador.Core Namespace=Trocador.Core.LogSystem Type=LogManager)" Label="LogManager" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="8a668448-7c2e-4e77-98e3-e8b36ccc1aaf" name="DataContracts" />
+  </layers>
+</layerModel>

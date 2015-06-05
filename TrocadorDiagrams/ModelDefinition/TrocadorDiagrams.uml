@@ -1,0 +1,2272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="dc33e6b8-b949-47d6-878f-b66211ad14d8"
+  name="TrocadorDiagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="a9f4c393-e987-466f-89e3-5f0b7d4f16b2"
+        name="Trocador"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="a433e379-91cd-4f6a-b5e5-74be25f0d75b"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d76e8ddf-eaca-4008-9e5e-33b674ca917a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0b602b99-3a32-4f16-bcea-7f514d0501b5"
+                  LastKnownName="Validar dados"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="c98b9bbe-8e67-404a-84ad-5a5c92073572"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="0b602b99-3a32-4f16-bcea-7f514d0501b5"
+            name="Validar dados"
+            isLeaf="false" />
+          <opaqueAction
+            Id="33edf29f-8e4c-4128-b1a9-4bacb11b050c"
+            name="Action1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="93455a4d-1e1e-4bc8-a557-8be249ca3ac0"
+            name="Action2"
+            isLeaf="false" />
+          <opaqueAction
+            Id="703de708-98b1-411c-942b-210be402be51"
+            name="Action3"
+            isLeaf="false" />
+          <sendSignalAction
+            Id="2117187e-fe43-4e8a-a511-f89dd5eda169"
+            name="Enviar email de boas vindas com link de ativação"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f601ad9b-1622-4db6-9cbc-b53312e3ab6a"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="a4b4fc8d-f781-4de1-b263-fc7c5d0983a9"
+                  LastKnownName="Ativar a conta"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <acceptEventAction
+            Id="a4b4fc8d-f781-4de1-b263-fc7c5d0983a9"
+            name="Ativar a conta"
+            isLeaf="false"
+            isUnmarshall="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="a3eadc2c-03dd-4514-acaa-0a849cd05ee7"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0225e057-fc66-431c-a5a3-0b200bc7b159"
+            isDerived="false"
+            sourceEndRoleName="Actor1"
+            targetEndRoleName="Validar credenciais"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f5ae8a88-cae1-46e4-8b1c-3584d3d4591c"
+              LastKnownName="Validar credenciais"
+              LastKnownLocation="TrocadorDiagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca3f413f-de22-4594-af38-fa18bb29738c"
+                  name="Actor1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba77a7e8-02e1-4510-8094-e6d6e69cec24"
+                  name="Validar credenciais"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f5ae8a88-cae1-46e4-8b1c-3584d3d4591c"
+        name="Validar credenciais"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="114db1fa-ad5c-42e0-af60-b2654d2bb19c"
+        name="Salvar log de acesso"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="72bf3a5d-ee1e-4863-bae8-25842a270caa">
+            <useCaseMoniker
+              Id="f5ae8a88-cae1-46e4-8b1c-3584d3d4591c"
+              LastKnownName="Validar credenciais"
+              LastKnownLocation="TrocadorDiagrams.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="03a2ec88-cbd9-4e2e-95c1-3e0c39e6712f"
+        name="Redirecionar Usuário para a tela principal"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="4fed0dea-a0a6-4cbf-beef-e0a58a425cc4">
+            <useCaseMoniker
+              Id="f5ae8a88-cae1-46e4-8b1c-3584d3d4591c"
+              LastKnownName="Validar credenciais"
+              LastKnownLocation="TrocadorDiagrams.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0b4e60f2-7e84-4252-a2a1-1fc25594c291"
+        name="Incrementar contador de tentativas de login"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="77c6dedd-7d98-43f7-814a-18cb8d75cd30">
+            <useCaseMoniker
+              Id="f5ae8a88-cae1-46e4-8b1c-3584d3d4591c"
+              LastKnownName="Validar credenciais"
+              LastKnownLocation="TrocadorDiagrams.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="e8132c45-dfd3-4cef-838f-487c795865a0"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <messageOccurrenceSpecification
+            Id="8d9acdb0-ea8a-4110-b49e-f1616a77891c"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0a27cd06-f97c-4249-a390-766c05bab898"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="9abca1e7-f446-496b-ba51-2d64773f0e18"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="168de107-e4e5-4c2d-a44e-ca1c3aa7c813"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2f7f45ff-45d9-4e76-93ba-5acba74ccf48"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="46949a42-36ff-4157-a00e-218f7bd27b63"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="14d63d1a-ffc3-4170-8176-a52a3010b676"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="168de107-e4e5-4c2d-a44e-ca1c3aa7c813"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9cf9cc27-0fbf-4316-87f8-5e88bfe503e5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2f7f45ff-45d9-4e76-93ba-5acba74ccf48"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="77af3ceb-8d53-476a-9e6a-eab4dd121cb8"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="5c9f322c-be75-44e3-9d49-993540c925be"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="3ac2d04c-cd6d-4686-9aca-36964206a282"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7f84bbfc-57b3-48b0-a9e4-bff9b6e39ebc"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1021d0c6-3572-49c4-a096-bf4b0145cb8c"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="3ac2d04c-cd6d-4686-9aca-36964206a282"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="17946409-3899-4a51-9dca-52bb9d487817"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7f84bbfc-57b3-48b0-a9e4-bff9b6e39ebc"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="46949a42-36ff-4157-a00e-218f7bd27b63"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1021d0c6-3572-49c4-a096-bf4b0145cb8c"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="14d63d1a-ffc3-4170-8176-a52a3010b676"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="5c9f322c-be75-44e3-9d49-993540c925be"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f7df5705-55bd-4ea0-8553-f5450284852d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="9abca1e7-f446-496b-ba51-2d64773f0e18"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fc1c280a-8b65-46d7-8d8e-cf53e960be02"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f89fdc82-1b3b-41da-92af-70bcddc2c27c"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="71f6ded2-a869-4ee6-822b-799eec0c62f1"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="32781563-eefc-4224-84ea-6b01a5d9f702"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0636c5b6-4dbb-4949-b4ce-01139e3fd9e0"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9a6dc686-dd31-47b2-a2f2-867db032d947"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="32781563-eefc-4224-84ea-6b01a5d9f702"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c62a8fb8-50ac-4358-95ca-abe2c16933f5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0636c5b6-4dbb-4949-b4ce-01139e3fd9e0"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0e0c9c2b-88d6-4b3f-bc9d-3a5afe1391ae"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9a6dc686-dd31-47b2-a2f2-867db032d947"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a969be93-c4ca-43b7-bdb5-6a0cd0473eda"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="71f6ded2-a869-4ee6-822b-799eec0c62f1"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6443f947-d7c4-4e5b-b022-1527cfe51d30"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="551d8bae-11c6-434b-b5d6-c26850e4c07f"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+                LastKnownName="Log"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="3427ef33-a6d8-4d99-b2c1-2c2bf357227a"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="740f73e2-12f6-4c05-ae3b-cbc949e55ea3"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3f57e728-7dde-4bc8-b631-560cb0da0115"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8abaf505-2863-4f26-99b9-e43fb4ba4849"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="969a24fa-ed6b-4554-90a6-df035aec31ab"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d085743f-81b3-4658-9c74-78a28f4b3064"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="740f73e2-12f6-4c05-ae3b-cbc949e55ea3"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a1c18426-35b5-4546-8410-bf8441daa991"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+                LastKnownName="Log"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="46b90e02-d756-4f3c-ac5e-0d58c64fb947"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3f57e728-7dde-4bc8-b631-560cb0da0115"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+                LastKnownName="Log"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="ffbee4cd-5ef4-4965-a39d-e86389412512"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="9312b19a-480c-4809-95b8-270609214340"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="c796dd8b-37da-4e35-85e4-2d4a48653a76"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="18e86170-582e-415c-b740-e69fbbb6b780"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3d9d1ce1-a6af-4b9c-8201-9ffbe4e57d30"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="c796dd8b-37da-4e35-85e4-2d4a48653a76"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0675ada0-2dd1-41ce-aa46-4fb503570dec"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8abaf505-2863-4f26-99b9-e43fb4ba4849"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+                LastKnownName="Log"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="18e86170-582e-415c-b740-e69fbbb6b780"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3d9d1ce1-a6af-4b9c-8201-9ffbe4e57d30"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="969a24fa-ed6b-4554-90a6-df035aec31ab"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+                LastKnownName="Log"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="9312b19a-480c-4809-95b8-270609214340"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="22bdc1b6-932a-4518-81c8-fcfee75ba999"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6253d4f9-bab9-4dcb-8006-351ad1b13cbb"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d085743f-81b3-4658-9c74-78a28f4b3064"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+                LastKnownName="Log"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="3427ef33-a6d8-4d99-b2c1-2c2bf357227a"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="56479878-3e69-44ca-b887-a89126eccf6d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+                LastKnownName="Log"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="8e133b41-ecaa-42dc-a934-7800121cc94e"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+                LastKnownName="ProcessorFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="767f37f9-69ea-428b-b41b-4b49db6b64af"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="96423800-a181-449b-a78d-a9412aa463bf"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="746568b0-d18c-4375-b6d7-324083ecbc6c"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ba4cd00a-db02-4957-a6a5-a35f7a5f558f"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4283d3fd-5da7-4e93-9e95-185f37a632d4"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="24aede4b-77c8-4e6d-a1e3-020af744550b"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="96423800-a181-449b-a78d-a9412aa463bf"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b9ea0e89-e323-429b-9b1d-c304f7160374"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+                LastKnownName="ProcessorFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="746568b0-d18c-4375-b6d7-324083ecbc6c"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+                LastKnownName="ProcessorFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="23c791fb-5dca-44e8-879d-ab1d23463898"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f95668d2-17ec-41d5-bfc1-a68d64ee2b47"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2cd300a1-9340-430c-b910-f5d780c3b3d1"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f977899b-ae4d-40e4-9176-95afaff5a8cb"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="5c50e47d-77f4-4df7-8baf-67f2ae50208f"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="047183ca-3a0f-496c-ac9a-d54747e361f1"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f977899b-ae4d-40e4-9176-95afaff5a8cb"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="eefe29bb-17f4-4cb9-9fed-802569d441e1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ba4cd00a-db02-4957-a6a5-a35f7a5f558f"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+                LastKnownName="ProcessorFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5c50e47d-77f4-4df7-8baf-67f2ae50208f"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4283d3fd-5da7-4e93-9e95-185f37a632d4"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+                LastKnownName="ProcessorFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="047183ca-3a0f-496c-ac9a-d54747e361f1"
+            name="MessageOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2cd300a1-9340-430c-b910-f5d780c3b3d1"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9533e7ed-eaa1-4efb-af72-80ad34319ff3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="24aede4b-77c8-4e6d-a1e3-020af744550b"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+                LastKnownName="ProcessorFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="be2987c3-1402-40f9-be24-af17e1ceaf70"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="767f37f9-69ea-428b-b41b-4b49db6b64af"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d24966bb-6f4b-4e0f-ad7f-748304fd2ccf"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+                LastKnownName="ProcessorFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f50ed56c-ee16-4b6c-8826-f741730eefeb"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="6cc5a60f-a1c0-448d-832b-2c32a965504e"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="54269c7e-9e59-41c5-849c-fefa81707500"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ac6a1b40-ca9a-405e-b2c9-cc68ffe0d99a"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b9c91390-33e0-47f0-9fa1-a26f0d5c8e01"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="54269c7e-9e59-41c5-849c-fefa81707500"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c9e7b344-20f7-4096-b965-6f221ebb29c1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ac6a1b40-ca9a-405e-b2c9-cc68ffe0d99a"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7ed923e7-69b6-4e4e-bb47-f68e33533aa8"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4d1e3f26-1ee2-4c03-bec2-0623d28efb84"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b9c91390-33e0-47f0-9fa1-a26f0d5c8e01"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="6cc5a60f-a1c0-448d-832b-2c32a965504e"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5b4eb25e-dafe-4e65-b3ef-810a01203e0e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+                LastKnownName="Processor"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="c75c344b-b8e0-473b-a175-b7b028ce7403"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="927e09e5-2540-4dbf-abc1-91cab6e631e7"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5d973e6f-478b-4a7d-b27d-6d91a9b05ef5"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="793ea64c-3715-41d9-80d6-a64ebccecdd5"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5d973e6f-478b-4a7d-b27d-6d91a9b05ef5"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1786c390-f1fb-43c2-9d9f-1f90e28dcee8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6e7f756a-e05b-46ac-b20c-2c4f9f6df76b"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="793ea64c-3715-41d9-80d6-a64ebccecdd5"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f0cf2bf5-4c90-4825-b609-f06dd7995f30"
+            name="MessageOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="84d47faf-c046-4946-826e-637d6a189f5a"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="51f49f33-5f5d-40e0-9f49-8aafd2740421"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="1d1e3bfc-c58d-4cb2-8376-34ab0ee4274b"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="773ef347-cd89-481a-80f6-acd3eca6b700"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="1d1e3bfc-c58d-4cb2-8376-34ab0ee4274b"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6d5588e4-36f6-4a4b-84ad-7015847c99e6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="927e09e5-2540-4dbf-abc1-91cab6e631e7"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7e724364-f6be-412d-8e5c-8eb59485db9f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="773ef347-cd89-481a-80f6-acd3eca6b700"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="51f49f33-5f5d-40e0-9f49-8aafd2740421"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ee98f532-0ea8-41d2-b572-322ef4a61d77"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="7178a889-5342-4062-8d17-e3830550f41a"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="de5e1fdc-7355-4e86-aaa6-9c3414875952"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ebdb4374-f5c2-40b9-9583-461c1e4b3545"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0d03cc2d-a5cb-46a4-bbff-c455c24c6e06"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7d4c9f14-c17e-486a-a3be-9f5debf62140"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="ebdb4374-f5c2-40b9-9583-461c1e4b3545"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7c9369eb-9683-4740-b770-a4df4eceb9f4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2553a70b-1a4c-4324-82b4-ca49650587d4"
+            name="MessageOccurrenceSpecification35">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0d03cc2d-a5cb-46a4-bbff-c455c24c6e06"
+            name="MessageOccurrenceSpecification36">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7d4c9f14-c17e-486a-a3be-9f5debf62140"
+            name="MessageOccurrenceSpecification37">
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bf4fa6c9-22b8-4056-a3e1-9d63f1e7a46e"
+            name="MessageOccurrenceSpecification38">
+            <covered>
+              <lifelineMoniker
+                Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+                LastKnownName="TrocadorManager"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="de5e1fdc-7355-4e86-aaa6-9c3414875952"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5ac62464-e942-40d0-9cae-27faf6dba8ce"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="258bf449-b350-4548-af53-ee84746a4e60"
+                LastKnownName="LogFactory"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="1b6276bb-c048-42e4-8e8a-2ff725cc1230"
+            name="TrocadorManager"
+            isActor="false"
+            lifelineDisplayName="TrocadorManager">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d9acdb0-ea8a-4110-b49e-f1616a77891c"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="168de107-e4e5-4c2d-a44e-ca1c3aa7c813"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9abca1e7-f446-496b-ba51-2d64773f0e18"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0e0c9c2b-88d6-4b3f-bc9d-3a5afe1391ae"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a969be93-c4ca-43b7-bdb5-6a0cd0473eda"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="46b90e02-d756-4f3c-ac5e-0d58c64fb947"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6253d4f9-bab9-4dcb-8006-351ad1b13cbb"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="23c791fb-5dca-44e8-879d-ab1d23463898"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="be2987c3-1402-40f9-be24-af17e1ceaf70"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7ed923e7-69b6-4e4e-bb47-f68e33533aa8"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4d1e3f26-1ee2-4c03-bec2-0623d28efb84"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6e7f756a-e05b-46ac-b20c-2c4f9f6df76b"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f0cf2bf5-4c90-4825-b609-f06dd7995f30"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="1d1e3bfc-c58d-4cb2-8376-34ab0ee4274b"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="51f49f33-5f5d-40e0-9f49-8aafd2740421"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2553a70b-1a4c-4324-82b4-ca49650587d4"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bf4fa6c9-22b8-4056-a3e1-9d63f1e7a46e"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="258bf449-b350-4548-af53-ee84746a4e60"
+            name="LogFactory"
+            isActor="false"
+            lifelineDisplayName="LogFactory">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="3ac2d04c-cd6d-4686-9aca-36964206a282"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5c9f322c-be75-44e3-9d49-993540c925be"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="32781563-eefc-4224-84ea-6b01a5d9f702"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="71f6ded2-a869-4ee6-822b-799eec0c62f1"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f977899b-ae4d-40e4-9176-95afaff5a8cb"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2cd300a1-9340-430c-b910-f5d780c3b3d1"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5d973e6f-478b-4a7d-b27d-6d91a9b05ef5"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="927e09e5-2540-4dbf-abc1-91cab6e631e7"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ebdb4374-f5c2-40b9-9583-461c1e4b3545"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="de5e1fdc-7355-4e86-aaa6-9c3414875952"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="de8594fd-e217-4b87-837f-11ddffdf2e05"
+            name="ProcessorFactory"
+            isActor="false"
+            lifelineDisplayName="ProcessorFactory">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="96423800-a181-449b-a78d-a9412aa463bf"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="767f37f9-69ea-428b-b41b-4b49db6b64af"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="2cf9260a-b3d0-4c6a-b9a7-f82298c128c0"
+            name="Log"
+            isActor="false"
+            lifelineDisplayName="Log">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="740f73e2-12f6-4c05-ae3b-cbc949e55ea3"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="3427ef33-a6d8-4d99-b2c1-2c2bf357227a"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="428ddaef-b6e3-4edf-9c3e-c5d2cbd15e55"
+            name="Processor"
+            isActor="false"
+            lifelineDisplayName="Processor">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="c796dd8b-37da-4e35-85e4-2d4a48653a76"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9312b19a-480c-4809-95b8-270609214340"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="54269c7e-9e59-41c5-849c-fefa81707500"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="6cc5a60f-a1c0-448d-832b-2c32a965504e"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="d9a27983-53fd-4b9e-a7d0-fb57ec01ad92"
+            name="CalculateChange"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d9acdb0-ea8a-4110-b49e-f1616a77891c"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2f7f45ff-45d9-4e76-93ba-5acba74ccf48"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="549bbc79-b240-4986-b0c7-016275f14ecb"
+            name="Message4"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="46949a42-36ff-4157-a00e-218f7bd27b63"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7f84bbfc-57b3-48b0-a9e4-bff9b6e39ebc"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ec04b4dc-2621-401b-bdab-99c6d41ab299"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1021d0c6-3572-49c4-a096-bf4b0145cb8c"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="14d63d1a-ffc3-4170-8176-a52a3010b676"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8d827c9f-0fc0-424b-a2b8-02a85ae91de2"
+            name="Create"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0e0c9c2b-88d6-4b3f-bc9d-3a5afe1391ae"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0636c5b6-4dbb-4949-b4ce-01139e3fd9e0"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b34f7212-7cdc-4766-ad4e-82775a2b0192"
+            name="AbstractLog"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9a6dc686-dd31-47b2-a2f2-867db032d947"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a969be93-c4ca-43b7-bdb5-6a0cd0473eda"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0a2572e1-e8eb-42fe-8d66-24fefef104e3"
+            name="Save"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="46b90e02-d756-4f3c-ac5e-0d58c64fb947"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3f57e728-7dde-4bc8-b631-560cb0da0115"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d88956e1-dd36-4a3f-91a1-01f8b7b4f23b"
+            name="Message2"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8abaf505-2863-4f26-99b9-e43fb4ba4849"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="18e86170-582e-415c-b740-e69fbbb6b780"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7a25bf23-3bd7-4fe1-bc40-c4a34ad226eb"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3d9d1ce1-a6af-4b9c-8201-9ffbe4e57d30"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="969a24fa-ed6b-4554-90a6-df035aec31ab"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0a35565c-0b9a-471d-994e-234aecdb0e81"
+            name="void"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d085743f-81b3-4658-9c74-78a28f4b3064"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6253d4f9-bab9-4dcb-8006-351ad1b13cbb"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d3255e09-906e-411a-ae65-e45209542411"
+            name="Create"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="23c791fb-5dca-44e8-879d-ab1d23463898"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="746568b0-d18c-4375-b6d7-324083ecbc6c"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="df74c725-5b17-439b-8bdb-9dc792a46f72"
+            name="Message1"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ba4cd00a-db02-4957-a6a5-a35f7a5f558f"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5c50e47d-77f4-4df7-8baf-67f2ae50208f"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="98858204-d7be-48ab-8508-d5388818bc2a"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="047183ca-3a0f-496c-ac9a-d54747e361f1"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4283d3fd-5da7-4e93-9e95-185f37a632d4"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c4f9ee93-544d-422e-ba28-499272cdd9d0"
+            name="AbstractProcessor"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="24aede4b-77c8-4e6d-a1e3-020af744550b"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="be2987c3-1402-40f9-be24-af17e1ceaf70"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="04dbf8d1-0e2b-4239-bc17-4037faac9f67"
+            name="CalculateChange"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7ed923e7-69b6-4e4e-bb47-f68e33533aa8"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ac6a1b40-ca9a-405e-b2c9-cc68ffe0d99a"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e7489fb0-d886-42d5-b13d-ead49fc55dda"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b9c91390-33e0-47f0-9fa1-a26f0d5c8e01"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4d1e3f26-1ee2-4c03-bec2-0623d28efb84"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e1e27465-e03e-4213-a550-4fffdbd023a9"
+            name="Message3"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6e7f756a-e05b-46ac-b20c-2c4f9f6df76b"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="793ea64c-3715-41d9-80d6-a64ebccecdd5"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f81b4406-fa4d-4712-9eeb-b7e7d0b68172"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f0cf2bf5-4c90-4825-b609-f06dd7995f30"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="773ef347-cd89-481a-80f6-acd3eca6b700"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d822845c-c0f7-46f9-bd69-6ae89d4c9772"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2553a70b-1a4c-4324-82b4-ca49650587d4"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0d03cc2d-a5cb-46a4-bbff-c455c24c6e06"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fe208a1d-60d1-4f1e-93eb-34055113b2cb"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7d4c9f14-c17e-486a-a3be-9f5debf62140"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bf4fa6c9-22b8-4056-a3e1-9d63f1e7a46e"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c62a8fb8-50ac-4358-95ca-abe2c16933f5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6443f947-d7c4-4e5b-b022-1527cfe51d30"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a1c18426-35b5-4546-8410-bf8441daa991"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="56479878-3e69-44ca-b887-a89126eccf6d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b9ea0e89-e323-429b-9b1d-c304f7160374"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d24966bb-6f4b-4e0f-ad7f-748304fd2ccf"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c9e7b344-20f7-4096-b965-6f221ebb29c1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5b4eb25e-dafe-4e65-b3ef-810a01203e0e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="eefe29bb-17f4-4cb9-9fed-802569d441e1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9533e7ed-eaa1-4efb-af72-80ad34319ff3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0675ada0-2dd1-41ce-aa46-4fb503570dec"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="22bdc1b6-932a-4518-81c8-fcfee75ba999"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1786c390-f1fb-43c2-9d9f-1f90e28dcee8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7e724364-f6be-412d-8e5c-8eb59485db9f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9cf9cc27-0fbf-4316-87f8-5e88bfe503e5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fc1c280a-8b65-46d7-8d8e-cf53e960be02"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="17946409-3899-4a51-9dca-52bb9d487817"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f7df5705-55bd-4ea0-8553-f5450284852d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6d5588e4-36f6-4a4b-84ad-7015847c99e6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ee98f532-0ea8-41d2-b572-322ef4a61d77"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7c9369eb-9683-4740-b770-a4df4eceb9f4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5ac62464-e942-40d0-9cae-27faf6dba8ce"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e1a671d1-d6e7-4e74-aa94-278faca0e616"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="48fa055e-403f-4cb8-a4e5-ffa478dfbb7e"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="9d56a399-3b12-4a1c-861e-de58b0cfd747"
+        name="Portal MVC"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="c896087e-8495-487a-a75e-76975d4602ba"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="45041341-c51c-48f6-95d5-9de308fb8579"
+                name="NET.TCP">
+                <providedInterfaceMoniker
+                  Id="4c1ab5be-96e7-4e43-8ca5-44e94f05e83b"
+                  LastKnownName="Port1"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="1d8d1a4d-75ea-44d6-bba5-4c77ce242f4e"
+                LastKnownName="IUserManagement"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="60abfd0d-e3a2-45ac-8acf-c9a2e7eb0cb3"
+        name="PortalService WCF"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="4c1ab5be-96e7-4e43-8ca5-44e94f05e83b"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="d77b3633-d602-44c6-bfc0-c55ddbc231e2"
+                LastKnownName="IUserManagement"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface
+            Id="0891ea19-123c-448e-b3dd-5fa78794c1de"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="fc40172f-c1c7-45ef-8691-ce8b3a22ceb4"
+                name="JSON">
+                <providedInterfaceMoniker
+                  Id="b3f695d5-21a2-41b9-9cc9-345e0bc039ba"
+                  LastKnownName="Port1"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="c6b223bc-6785-4c5b-8797-9e885363559b"
+                LastKnownName="IRoles"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <requiredInterface
+            Id="21f80cf3-bad7-4763-91f3-ad5179dcb896"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="ef830812-fcb5-4fae-8cce-478b19137570"
+                name="TCP: 443">
+                <providedInterfaceMoniker
+                  Id="485e25f4-687b-424e-ab59-e06d2a7783d3"
+                  LastKnownName="Port1"
+                  LastKnownLocation="TrocadorDiagrams.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="8f7ece72-974b-43fd-8a08-36221bb72b08"
+                LastKnownName="SQL"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="fee773de-822b-4cb6-a164-676aaaf35b60"
+        name="DomainServices WCF"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="b3f695d5-21a2-41b9-9cc9-345e0bc039ba"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="683e5bbf-5777-4bd1-905d-d0a12b22fd8b"
+                LastKnownName="IRole"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="d53e6a24-bc2c-4d68-84a8-05ba84800057"
+        name="Banco de dados SQL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="485e25f4-687b-424e-ab59-e06d2a7783d3"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="bf80c34e-9d01-4f58-9257-6a7de3cce473"
+                LastKnownName="SQL"
+                LastKnownLocation="TrocadorDiagrams.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d77b3633-d602-44c6-bfc0-c55ddbc231e2"
+        name="IUserManagement"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="1d8d1a4d-75ea-44d6-bba5-4c77ce242f4e"
+        name="IUserManagement"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c6b223bc-6785-4c5b-8797-9e885363559b"
+        name="IRoles"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="683e5bbf-5777-4bd1-905d-d0a12b22fd8b"
+        name="IRole"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="bf80c34e-9d01-4f58-9257-6a7de3cce473"
+        name="SQL"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8f7ece72-974b-43fd-8a08-36221bb72b08"
+        name="SQL"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

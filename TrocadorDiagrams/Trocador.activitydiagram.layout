@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Trocador">
+  <activityRootModelMoniker Id="41713c8c-dfe8-4b8b-aa2c-812ff6efc87f" />
+  <nestedChildShapes>
+    <initialNodeShape Id="6c183729-b557-4ff1-95a5-00fc16fb22a6" absoluteBounds="1.25, 0.875, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="c7f98f3b-3886-4eec-ad7f-e995bfce932f" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <activityFinalNodeShape Id="cc492eb9-0e18-48c8-89f4-23f4a01c6181" absoluteBounds="1, 4.875, 0.125, 0.125" customColor="89, 89, 89">
+      <activityFinalNodeMoniker Id="4285cdb7-7f25-45b2-9031-d83b865363fb" LastKnownName="ActivityFinal1" />
+    </activityFinalNodeShape>
+    <actionShape Id="00c10261-f622-4f5a-9eef-ab345d314999" absoluteBounds="1.25, 1.375, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="43d26255-7533-4aba-bb3d-e34cd5b00200" LastKnownName="Validar dados" />
+    </actionShape>
+    <actionShape Id="1b55fa9c-7ffd-48cf-befa-548755c2fdde" absoluteBounds="2, 3.25, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="b71f21cc-0e4d-4b69-858d-165b2ac56ffc" LastKnownName="Action1" />
+    </actionShape>
+    <actionShape Id="520f5043-f9d0-421b-b406-c439d065e77a" absoluteBounds="2.75, 1.375, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="72e691dd-2131-4d5d-8061-7493ead960a1" LastKnownName="Action2" />
+    </actionShape>
+    <actionShape Id="d4ce07a7-913c-42af-81e6-9406f6d7bc33" absoluteBounds="1.375, 4, 2.375, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="cc886208-15ec-4f97-a2c5-78274793c221" LastKnownName="Action3" />
+    </actionShape>
+    <sendSignalActionShape Id="2a565787-db8d-4061-9cb7-40870252ddba" absoluteBounds="1.375, 2.25, 1.125, 0.625" customColor="185, 212, 238">
+      <sendSignalActionMoniker Id="e72965da-a6fd-4252-8cba-e1bfe87515c4" LastKnownName="Enviar email de boas vindas com link de ativação" />
+      <relativeChildShapes />
+    </sendSignalActionShape>
+    <acceptEventActionShape Id="60fd7202-5f4e-4bea-89f8-a8183f8a3065" absoluteBounds="2.625, 2.25, 1.125, 0.625" customColor="185, 212, 238">
+      <acceptEventActionMoniker Id="b4867525-c39c-4d09-ad21-551d234e2a4c" LastKnownName="Ativar a conta" />
+    </acceptEventActionShape>
+    <controlFlowConnector edgePoints="[(2.5 : 2.5625); (2.80542195912176 : 2.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="d2cfe590-fcc9-4cdd-8e51-671a6f8926ed" />
+      <relativeChildShapes />
+      <nodes>
+        <sendSignalActionShapeMoniker Id="2a565787-db8d-4061-9cb7-40870252ddba" />
+        <acceptEventActionShapeMoniker Id="60fd7202-5f4e-4bea-89f8-a8183f8a3065" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(1.3125 : 1); (1.3125 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="7b34137c-3ca9-41fa-a917-89fba3d25da7" />
+      <relativeChildShapes />
+      <nodes>
+        <initialNodeShapeMoniker Id="6c183729-b557-4ff1-95a5-00fc16fb22a6" />
+        <actionShapeMoniker Id="00c10261-f622-4f5a-9eef-ab345d314999" />
+      </nodes>
+    </controlFlowConnector>
+  </nestedChildShapes>
+</activityDiagram>

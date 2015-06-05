@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="3eb89dde-db91-4925-9ed7-37259a7de559" name="UMLUseCaseDiagram1" linkedPackageId="bb9bc11f-d5e3-4af9-95ad-fc8a316cc554" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="b3b7e4d5-df37-4906-baf7-dad061e3d247">
+      <profileInstance Id="cc37e015-6d75-439c-ba54-c5398c4a5848" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c04aed0d-ef72-43b0-97b9-716ee862f6af">
+      <profileInstance Id="63f0ade0-7267-44b6-bba4-35315eb3ab9b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="69596feb-55c3-40bf-9b75-c9dad1f328e0" name="Actor1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a3eadc2c-03dd-4514-acaa-0a849cd05ee7" />
+        <targetEnds>
+          <association Id="ff4eb44d-edec-4e2f-8a23-ef936c9f0619" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Validar credenciais" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d2a0663d-ee4d-460c-a1c3-73b9c4301cb7" LastKnownName="Validar credenciais" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44ce4cd8-c45d-4abe-90c7-25909b782515" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ca3f413f-de22-4594-af38-fa18bb29738c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eba2d941-1d2d-4b46-8e4c-d9ece6d07d84" name="Validar credenciais" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba77a7e8-02e1-4510-8094-e6d6e69cec24" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0225e057-fc66-431c-a5a3-0b200bc7b159" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d2a0663d-ee4d-460c-a1c3-73b9c4301cb7" name="Validar credenciais" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f5ae8a88-cae1-46e4-8b1c-3584d3d4591c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ddc0d701-0d83-424c-b1e0-855bf00e5270" name="Salvar log de acesso" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="114db1fa-ad5c-42e0-af60-b2654d2bb19c" />
+        <suppliersInternal>
+          <dependency Id="9143ce65-bb57-4bc4-959f-ecad6e1f3897">
+            <useCaseMoniker Id="d2a0663d-ee4d-460c-a1c3-73b9c4301cb7" LastKnownName="Validar credenciais" />
+            <elementDefinition Id="72bf3a5d-ee1e-4863-bae8-25842a270caa" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ad22da82-75ee-49d5-a733-a9e24697e886" name="Redirecionar Usuário para a tela principal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="03a2ec88-cbd9-4e2e-95c1-3e0c39e6712f" />
+        <suppliersInternal>
+          <dependency Id="f463fe70-ef48-4155-9e00-ba0db02752b8">
+            <useCaseMoniker Id="d2a0663d-ee4d-460c-a1c3-73b9c4301cb7" LastKnownName="Validar credenciais" />
+            <elementDefinition Id="4fed0dea-a0a6-4cbf-beef-e0a58a425cc4" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ce8ae768-c4a0-449b-bc77-bc5d73052264" name="Incrementar contador de tentativas de login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b4e60f2-7e84-4252-a2a1-1fc25594c291" />
+        <suppliersInternal>
+          <dependency Id="7cdd66e0-ec37-4a6a-a421-b673e7722093">
+            <useCaseMoniker Id="d2a0663d-ee4d-460c-a1c3-73b9c4301cb7" LastKnownName="Validar credenciais" />
+            <elementDefinition Id="77c6dedd-7d98-43f7-814a-18cb8d75cd30" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="bb9bc11f-d5e3-4af9-95ad-fc8a316cc554" name="TrocadorDiagrams">
+    <elementDefinition Id="dc33e6b8-b949-47d6-878f-b66211ad14d8" />
+  </package>
+</useCaseModelRoot>

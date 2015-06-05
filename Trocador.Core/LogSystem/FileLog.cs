@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Trocador.Core.Utility;
 
 namespace Trocador.Core.LogSystem {
-	class FileLog : AbstractLog{
+	public class FileLog : AbstractLog{
 
 		public FileLog() : base() { }
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trocador.Core;
 using Trocador.Core.DataContracts;
-
+using Trocador.Core.LogSystem;
 
 namespace Trocador {
 
@@ -24,6 +24,8 @@ namespace Trocador {
         }
 
         private void UxBtnCalculate_Click(object sender, EventArgs e) {
+
+			FileLog fileLog = new FileLog();
 
             this.UxTxtChange.Text = string.Empty;
 

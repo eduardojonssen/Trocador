@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLUseCaseDiagram1">
+  <useCaseModelRootMoniker Id="3eb89dde-db91-4925-9ed7-37259a7de559" />
+  <nestedChildShapes>
+    <actorShape Id="db7e42bf-0fb4-4b53-bba6-da998879e3c8" absoluteBounds="0.625, 1.5, 1.375, 0.875" isReference="false" imagePath="C:\Users\Eduardo\Desktop\banana.png" heightOffset="0">
+      <actorMoniker Id="69596feb-55c3-40bf-9b75-c9dad1f328e0" LastKnownName="Actor1" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="22a0744a-d24e-43cd-a2b8-76ab8158f3b1" absoluteBounds="2.75, 1.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d2a0663d-ee4d-460c-a1c3-73b9c4301cb7" LastKnownName="Validar credenciais" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2 : 1.73790322580645); (2.81760552669496 : 1.50053387934663)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="ff4eb44d-edec-4e2f-8a23-ef936c9f0619" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="db7e42bf-0fb4-4b53-bba6-da998879e3c8" />
+        <useCaseShapeMoniker Id="22a0744a-d24e-43cd-a2b8-76ab8158f3b1" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="381b97c9-c94a-4127-9528-c36e866e946a" absoluteBounds="5.125, 2.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ddc0d701-0d83-424c-b1e0-855bf00e5270" LastKnownName="Salvar log de acesso" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(5.34424929083137 : 2.91813105640206); (3.53075070916863 : 1.58186894359794)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="9143ce65-bb57-4bc4-959f-ecad6e1f3897" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="381b97c9-c94a-4127-9528-c36e866e946a" />
+        <useCaseShapeMoniker Id="22a0744a-d24e-43cd-a2b8-76ab8158f3b1" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="a70dffc1-2f7d-454b-9899-a1e0a3c1c97b" absoluteBounds="2.875, 3.5, 1.75, 0.875" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ad22da82-75ee-49d5-a733-a9e24697e886" LastKnownName="Redirecionar Usuário para a tela principal" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(3.66503753125025 : 3.50206734765754); (3.29854998214271 : 1.6238186584814)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="f463fe70-ef48-4155-9e00-ba0db02752b8" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="a70dffc1-2f7d-454b-9899-a1e0a3c1c97b" />
+        <useCaseShapeMoniker Id="22a0744a-d24e-43cd-a2b8-76ab8158f3b1" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="f0c7daf6-5e97-487c-ad3d-ed39e8510d16" absoluteBounds="5.125, 1.375, 1.375, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ce8ae768-c4a0-449b-bc77-bc5d73052264" LastKnownName="Incrementar contador de tentativas de login" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(5.14848304940117 : 1.65282678771724); (3.72986870350414 : 1.44522468831768)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="7cdd66e0-ec37-4a6a-a421-b673e7722093" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="f0c7daf6-5e97-487c-ad3d-ed39e8510d16" />
+        <useCaseShapeMoniker Id="22a0744a-d24e-43cd-a2b8-76ab8158f3b1" />
+      </nodes>
+    </useCaseDependencyConnector>
+  </nestedChildShapes>
+</useCaseDiagram>
